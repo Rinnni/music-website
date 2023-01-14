@@ -100,7 +100,7 @@ IDE：IntelliJ IDEA 2018、VSCode
 
 ## 下载运行
 
-### 1、下载项目到本地
+### 1、下载项目到本地（注意使用git的方式，不要以zip方式下载项目）
 
 ```bash
 git clone git@github.com:Yin-Hongwei/music-website.git
@@ -121,7 +121,7 @@ git clone git@gitee.com:Yin-hongwei/music-website.git
 
 ### 3、修改配置文件
 
-1）创建数据库
+1）创建数据库（注意提前创建以tp_music命名的仓库）
 将 `music-website/music-server/sql` 文件夹中的 `tp_music.sql` 文件导入数据库。
 
 2）修改用户名密码
@@ -136,7 +136,7 @@ git clone git@gitee.com:Yin-hongwei/music-website.git
 ./mvnw spring-boot:run
 
 // 方法二
-mvn spring-boot:run // 前提装了 maven
+mvn spring-boot:run // 前提装了 maven，maven可以去官网： https://maven.apache.org/download.cgi 下载，可以在配置添加阿里源，提高速度。
 ```
 
 - **启动 redis**：直接在终端输入下面命令
@@ -150,7 +150,12 @@ redis-server
 > Mac 安装使用示例：https://www.jianshu.com/p/ce27d9ab4f8c
 
 - **启动客户端**：进入 music-client 目录，运行下面命令
-
+> npm命令需提前下载node，尽可能使用nvm去进行管理下载不同版本node，下载链接： https://github.com/coreybutler/nvm-windows/releases 推荐下载nvm-setup.zip 无需配置。
+```
+//切换国内镜像源命令
+nvm node_mirror https://npm.taobao.org/mirrors/node/
+nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+```
 ```js
 npm install // 安装依赖
 
